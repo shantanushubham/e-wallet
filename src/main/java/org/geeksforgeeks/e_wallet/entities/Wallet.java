@@ -1,9 +1,17 @@
 package org.geeksforgeeks.e_wallet.entities;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "wallet")
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 public class Wallet {
 
     @Id
@@ -13,4 +21,8 @@ public class Wallet {
 
     @Column(name = "balance", nullable = false)
     private double balance = 0D;
+
+    public void modifyBalanceBy(double balance) {
+        this.balance += balance;
+    }
 }

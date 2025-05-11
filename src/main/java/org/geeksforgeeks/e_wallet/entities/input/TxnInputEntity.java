@@ -3,13 +3,13 @@ package org.geeksforgeeks.e_wallet.entities.input;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
-import lombok.Builder;
-import lombok.Data;
-import lombok.With;
+import lombok.*;
 
 @Data
 @Builder
 @With
+@NoArgsConstructor
+@AllArgsConstructor
 public class TxnInputEntity {
 
     @NotNull
